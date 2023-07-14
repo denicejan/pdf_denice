@@ -24,7 +24,7 @@ class ClientFactory extends Factory
             'address' => fake()->address,
             'birth_date' => fake()->date(now()->subYears(18)),
             'initial_deposit' => fake()->numberBetween(10000,30000),
-            'email' => fake()->safeEmail()
+            'email' => fake()->unique()->safeEmail(),
         ];
     }
 }

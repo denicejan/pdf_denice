@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('address');
             $table->date('birth_date');
             $table->decimal('initial_deposit',10,2);
-            $table->string('email');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
